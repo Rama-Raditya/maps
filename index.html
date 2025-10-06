@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🗺️ Maps</h1>
+        <div class="controls">
+            <input type="text" id="searchInput" class="search-box" placeholder="Search location...">
+            <button onclick="searchLocation()">🔍</button>
+            <button onclick="getMyLocation()">📍</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="sidebar">
+            <div class="route-panel">
+                <h3>Route Planner</h3>
+                <input type="text" id="startPoint" class="route-input" placeholder="Starting point">
+                <input type="text" id="endPoint" class="route-input" placeholder="Destination">
+                <button onclick="calculateRoute()">Get Directions</button>
+                <button onclick="clearRoute()">Clear Route</button>
+                <div id="routeInstructions"></div>
+            </div>
+        </div>
+        
+        <div id="map"></div>
+        
+        <div class="info-box">
+            <h3>📍 Location Info</h3>
+            <p id="locationInfo">Click on the map or search for a location</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
